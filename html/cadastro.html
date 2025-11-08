@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar Filme</title>
+    <!-- ATENÇÃO: Corrija o caminho do CSS se for necessário. Estou usando o caminho relativo do seu exemplo. -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+</head>
+
+<body class="body-page">
+    <header>
+        <h1>Let<span class="logo-movie">Movie</span></h1>
+    </header>
+
+    <main>
+
+        <nav aria-label="Navegação secundária">
+            <a href="../html/index.html" class="link-voltar">← Voltar para Home</a>
+        </nav>
+
+        <section class="cadastro-page">
+            <h2>Cadastrar Filme</h2>
+
+            <form id="cadastro-input" method="post">
+
+                <div>
+                    <label for="nome">Título do Filme:</label>
+                    <input type="text" id="nome" name="nome" class="placeholder-class"
+                        placeholder="Insira o nome do filme." required>
+                </div>
+
+                <div>
+                    <label for="atores">Atores:</label>
+                    <input type="text" id="atores" name="atores" class="placeholder-class"
+                        placeholder="Insira o nome dos atores do filme." required>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="diretor">Diretor:</label>
+                        <input type="text" id="diretor" name="diretor" class="placeholder-class"
+                            placeholder="Insira o nome do diretor do filme." required>
+                    </div>
+
+                    <div>
+                        <label for="ano">Ano de lançamento:</label>
+                        <input type="number" id="ano" name="ano" class="placeholder-class"
+                            placeholder="Ano de lançamento (Ex: YYYY)" min="1900" max="2099" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="duracao">Duração:</label>
+                        <input type="number" id="duracao" name="duracao" class="placeholder-class min=" 1"
+                            placeholder="Insira a duração do filme (Ex: 180)" required>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <label for="id_genero">Gênero:</label>
+                        <div class="select-container">
+                            <select id="id_genero" name="id_genero" class="placeholder-class" required>
+                                <option value="" disabled selected hidden>Selecione um gênero</option>
+                                <option value="1">Romance</option>
+                                <option value="2">Drama</option>
+                                <option value="3">Ação</option>
+                                <option value="4">Ficção Científica</option>
+                                <option value="5">Aventura</option>
+                                <option value="6">Terror</option>
+                                <option value="7">Mistério</option>
+                                <option value="8">Suspense</option>
+                                <option value="9">Biografia</option>
+                                <option value="10">Comédia</option>
+                                <option value="11">Crime</option>
+                                <option value="12">Animação</option>
+                                <option value="13">Musical</option>
+                                <option value="14">Fantasia</option>
+                                <option value="15">Documentário</option>
+                                <option value="16">Comédia Romântica</option>
+                                <option value="17">Policial</option>
+                                <option value="18">Guerra</option>
+                                <option value="19">Noir</option>
+                                <option value="20">Histórico</option>
+                            </select>
+                            <i class="bi bi-caret-down-fill select-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div>
+                        <label for="produtora">Produtora:</label>
+                        <input type="text" id="produtora" name="produtora" class="placeholder-class"
+                            placeholder="Insira o nome da produtora do filme." required>
+                    </div>
+
+                    <div>
+                        <label for="id_linguagem">Linguagem:</label>
+                        <select id="id_linguagem" name="id_linguagem" class="linguagem-select" required>
+                            <option value="" disabled selected>Selecione uma linguagem</option>
+                            <option value="1">Português</option>
+                            <option value="2">Inglês</option>
+                            <option value="3">Espanhol</option>
+                            <option value="4">Francês</option>
+                            <option value="5">Alemão</option>
+                            <option value="6">Italiano</option>
+                            <option value="7">Japonês</option>
+                            <option value="8">Chinês</option>
+                            <option value="9">Coreano</option>
+                            <option value="10">Russo</option>
+                            <option value="11">Árabe</option>
+                            <option value="12">Hindi</option>
+                            <option value="13">Grego</option>
+                            <option value="14">Turco</option>
+                            <option value="15">Holandês</option>
+                            <option value="16">Polonês</option>
+                            <option value="17">Sueco</option>
+                            <option value="18">Norueguês</option>
+                            <option value="19">Hebraico</option>
+                            <option value="20">Tailandês</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="urlposter">URL do Poster do Filme:</label>
+                    <input type="url" id="urlposter" name="urlposter" class="placeholder-class"
+                        placeholder="Insira a URL do poster do filme." required>
+                </div>
+
+
+                <button type="submit" class="button-cadastro">Cadastrar Filme</button>
+
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© LetMovie Copyright all rights reserved - 2025</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

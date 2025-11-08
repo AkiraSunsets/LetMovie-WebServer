@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filme Cadastrado!</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+
+<body class="body-page">
+    <header>
+        <h1>Let<span class="logo-movie">Movie</span></h1>
+    </header>
+
+    <main>
+        <nav aria-label="Navegação secundária">
+            <a href="../html/index.html" class="link-voltar">← Voltar para Home</a>
+        </nav>
+
+        <section class="sucesso-page" id="sucesso-container">
+
+            <div id="loading-message">
+                <h2>✅ Filme Cadastrado com Sucesso!</h2>
+                <p>Buscando detalhes do filme...</p>
+            </div>
+
+            <div id="filme-detalhes" style="display: none;">
+                <div class="cardFilmeSucesso">
+                    <img id="filme-poster" src="" alt="Poster do filme" class="posterFilme">
+                    <div class="infoFilme">
+                        <h3 id="filme-titulo"></h3>
+                        <p><strong>Ano:</strong> <span id="filme-ano"></span></p>
+                        <p><strong>Duração:</strong> <span id="filme-duracao"></span> min</p>
+                        <p><strong>Gênero(s):</strong> <span id="filme-generos"></span></p>
+                        <p><strong>Linguagem(ns):</strong> <span id="filme-linguagens"></span></p>
+                        <p><strong>Diretor(es):</strong> <span id="filme-diretores"></span></p>
+                        <p><strong>Produtora(s):</strong> <span id="filme-produtoras"></span></p>
+                    </div>
+                </div>
+                <div class="infoFilmeExtraSucesso">
+                    <p><strong>Atores:</strong> <span id="filme-atores"></span></p>
+                </div>
+            </div>
+
+            <div id="error-message" style="display: none;">
+                <h2>❌ Erro ao buscar filme</h2>
+                <p>Não foi possível carregar os detalhes do filme cadastrado. Verifique o console para mais detalhes.
+                </p>
+            </div>
+
+            <div class="button-group">
+                <button><a href="../html/listar_filmes.html">Ver Lista Completa</a></button>
+                <button><a href="../html/cadastro.html">Adicionar Outro Filme</a></button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© LetMovie Copyright all rights reserved - 2025</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</body>
+
+</html>
